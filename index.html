@@ -1,0 +1,1418 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Reshma Mohan — Full Stack Developer, AI Product Developer and Java Full Stack & DSA Technical Trainer in Chennai. Explore experience, projects and technical skills."
+    />
+    <title>Reshma Mohan — AI Product Developer & Technical Trainer</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+      :root {
+        --ink: #182d39;
+        --muted: #677779;
+        --paper: #f7f7ef;
+        --accent: #c4dd86;
+        --line: #dce0d4;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "DM Sans", sans-serif;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button {
+        font: inherit;
+      }
+      ::selection {
+        background: var(--accent);
+      }
+      .wrap {
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 44px;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: #f7f7eff2;
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+      }
+      nav {
+        height: 84px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        font-family: Manrope, sans-serif;
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+      .logo span {
+        color: #7f9f42;
+      }
+      .links {
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        font-size: 13px;
+      }
+      .links a:hover {
+        color: #62822c;
+      }
+      .nav-contact {
+        border: 1px solid var(--ink);
+        padding: 11px 18px;
+        border-radius: 5px;
+      }
+      .menu {
+        display: none;
+      }
+      .hero {
+        padding-top: 84px;
+        padding-bottom: 72px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 65px;
+        align-items: center;
+      }
+      .eyebrow {
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+      }
+      .dot {
+        width: 7px;
+        height: 7px;
+        background: #7f9f42;
+        border-radius: 50%;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Manrope, sans-serif;
+      }
+      h1 {
+        font-size: clamp(48px, 5.6vw, 76px);
+        font-weight: 600;
+        letter-spacing: -4px;
+        line-height: 1.09;
+        margin: 26px 0;
+      }
+      h1 .soft {
+        color: #7b8b77;
+      }
+      h1 .name {
+        display: block;
+        font-size: 0.78em;
+        letter-spacing: -2px;
+      }
+      p {
+        line-height: 1.8;
+      }
+      .intro {
+        font-size: 16px;
+        color: var(--muted);
+        max-width: 490px;
+        margin-bottom: 29px;
+      }
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        padding: 15px 21px;
+        background: var(--ink);
+        color: white;
+        border-radius: 5px;
+        font-size: 13px;
+        border: 1px solid var(--ink);
+        transition: transform 0.2s;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .btn.secondary {
+        background: transparent;
+        color: var(--ink);
+      }
+      .location {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 27px;
+        display: flex;
+        gap: 9px;
+        align-items: center;
+      }
+      .visual {
+        position: relative;
+        background: #e7ebdf;
+        border: 1px solid #d8decf;
+        border-radius: 12px;
+        padding: 25px;
+        height: 414px;
+        overflow: hidden;
+      }
+      .visual:before {
+        content: "";
+        position: absolute;
+        width: 310px;
+        height: 310px;
+        border: 1px solid #c8d0bb;
+        border-radius: 50%;
+        right: -125px;
+        top: -135px;
+      }
+      .window {
+        position: relative;
+        margin-top: 20px;
+        background: var(--ink);
+        border-radius: 8px;
+        box-shadow: 0 24px 40px #182d3920;
+        transform: rotate(-3deg);
+        color: #dae3d7;
+      }
+      .window-top {
+        border-bottom: 1px solid #3a4c55;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 14px;
+        font-size: 10px;
+        color: #9facb0;
+      }
+      .window-top i {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background: #91a298;
+      }
+      .window-top span {
+        margin-left: 10px;
+      }
+      pre {
+        font-size: 12px;
+        line-height: 2.1;
+        padding: 22px 22px 29px;
+        margin: 0;
+        overflow: auto;
+        font-family: monospace;
+      }
+      .code-green {
+        color: #c4dd86;
+      }
+      .code-muted {
+        color: #8a9d9e;
+      }
+      .visual-tag {
+        position: absolute;
+        background: var(--paper);
+        border: 1px solid #d8decf;
+        border-radius: 6px;
+        padding: 15px 20px;
+        bottom: 31px;
+        right: 20px;
+        box-shadow: 0 8px 20px #182d3910;
+        font-size: 12px;
+      }
+      .visual-tag strong {
+        display: block;
+        font-size: 17px;
+        margin-bottom: 4px;
+      }
+      .visual-label {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        position: absolute;
+        bottom: 20px;
+        left: 25px;
+      }
+      .strip {
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        padding: 22px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .strip span:before {
+        content: "✦";
+        color: #839c55;
+        margin-right: 14px;
+      }
+      section {
+        padding: 85px 0;
+      }
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 25px;
+        margin-bottom: 35px;
+      }
+      .label {
+        font-size: 10px;
+        letter-spacing: 2px;
+        color: var(--muted);
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+      h2 {
+        font-size: 39px;
+        letter-spacing: -1.8px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 0;
+      }
+      .section-head p {
+        font-size: 13px;
+        color: var(--muted);
+        max-width: 310px;
+        margin: 0;
+      }
+      .about {
+        display: grid;
+        grid-template-columns: 1fr 1.45fr;
+        gap: 90px;
+      }
+      .about p {
+        margin-top: 0;
+        color: var(--muted);
+        font-size: 15px;
+      }
+      .about strong {
+        color: var(--ink);
+        font-weight: 500;
+      }
+      .facts {
+        display: flex;
+        gap: 45px;
+        margin-top: 30px;
+      }
+      .facts b {
+        display: block;
+        font-family: Manrope;
+        font-size: 29px;
+        letter-spacing: -1px;
+      }
+      .facts span {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .projects {
+        background: #edf0e5;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+      .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      .project {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .project-art {
+        height: 230px;
+        padding: 30px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .art-site {
+        background: #d8e0d2;
+      }
+      .mock {
+        width: 100%;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 15px 35px #182d3920;
+        padding: 14px;
+        transform: rotate(-3deg);
+      }
+      .mock-nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 7px;
+        color: #002a61;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+      .mock-hero {
+        background: #002a61;
+        color: white;
+        padding: 23px 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .mock-hero b {
+        font-family: Manrope;
+        font-size: 24px;
+        line-height: 1.2;
+      }
+      .mock-hero .circle {
+        width: 68px;
+        height: 68px;
+        border: 14px solid #91b2d0;
+        border-radius: 50%;
+      }
+      .mock-footer {
+        font-size: 6px;
+        padding-top: 12px;
+        display: flex;
+        justify-content: space-around;
+      }
+      .art-chart {
+        background: #203b46;
+      }
+      .chart {
+        width: 100%;
+        height: 100%;
+        background: #18313b;
+        border: 1px solid #52646b;
+        border-radius: 6px;
+        padding: 17px;
+        color: #e5eddd;
+      }
+      .chart-title {
+        font-size: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .chart svg {
+        width: 100%;
+        height: 115px;
+      }
+      .chart-bottom {
+        font-size: 8px;
+        color: #9caeb2;
+        display: flex;
+        justify-content: space-between;
+      }
+      .project-body {
+        padding: 25px;
+      }
+      .project-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .project-top h3 {
+        font-size: 20px;
+        letter-spacing: -0.5px;
+        margin: 0;
+      }
+      .project-body p {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 14px 0 20px;
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+      }
+      .tags span {
+        font-size: 10px;
+        padding: 6px 10px;
+        border: 1px solid var(--line);
+        border-radius: 3px;
+      }
+      .project-link {
+        display: inline-block;
+        font-size: 12px;
+        margin-top: 22px;
+        border-bottom: 1px solid var(--ink);
+        padding-bottom: 4px;
+      }
+      .project.small {
+        padding: 25px;
+      }
+      .project.small h3 {
+        font-size: 19px;
+        margin: 10px 0;
+      }
+      .project.small p {
+        font-size: 13px;
+        color: var(--muted);
+      }
+      .num {
+        font-size: 10px;
+        color: var(--muted);
+        letter-spacing: 1px;
+      }
+      .timeline {
+        margin-top: 35px;
+      }
+      .job {
+        display: grid;
+        grid-template-columns: 230px 1fr;
+        gap: 45px;
+        border-top: 1px solid var(--line);
+        padding: 30px 0;
+      }
+      .job-date {
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.9;
+      }
+      .job-date .current {
+        display: inline-block;
+        background: var(--accent);
+        font-size: 9px;
+        color: var(--ink);
+        padding: 2px 8px;
+        margin-bottom: 7px;
+        border-radius: 3px;
+      }
+      .job h3 {
+        margin: 0 0 6px;
+        font-size: 21px;
+        letter-spacing: -0.5px;
+      }
+      .company {
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .job ul {
+        padding-left: 17px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.9;
+        margin: 17px 0 0;
+      }
+      .skills-section {
+        background: var(--ink);
+        color: var(--paper);
+      }
+      .skills-section .label {
+        color: #a4b1af;
+      }
+      .skills-section .section-head p {
+        color: #afbdba;
+      }
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 28px;
+      }
+      .skill-group {
+        border-top: 1px solid #506269;
+        padding-top: 23px;
+      }
+      .skill-group .n {
+        color: var(--accent);
+        font-size: 10px;
+      }
+      .skill-group h3 {
+        font-size: 17px;
+        margin: 15px 0;
+      }
+      .skill-group p {
+        font-size: 12px;
+        color: #b9c5c1;
+        line-height: 2.2;
+      }
+      .education-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 65px;
+      }
+      .education-card {
+        border-top: 1px solid var(--line);
+        padding: 24px 0;
+      }
+      .education-card h3 {
+        font-size: 19px;
+        margin: 0 0 10px;
+      }
+      .education-card p {
+        font-size: 13px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .score {
+        font-size: 11px;
+        color: #647d37;
+        margin-top: 13px;
+      }
+      .certs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .certs li {
+        border-top: 1px solid var(--line);
+        padding: 17px 0;
+        font-size: 13px;
+        display: flex;
+        gap: 13px;
+      }
+      .certs li:before {
+        content: "↗";
+        color: #79964a;
+      }
+      .contact {
+        padding: 65px;
+        background: #e5edda;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 45px;
+        align-items: center;
+        margin-bottom: 75px;
+      }
+      .contact h2 {
+        font-size: 44px;
+      }
+      .contact p {
+        color: var(--muted);
+        font-size: 13px;
+        max-width: 370px;
+      }
+      .contact-links {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .email {
+        font-size: 18px;
+        border-bottom: 1px solid #b7c6a6;
+        padding-bottom: 16px;
+      }
+      .socials {
+        display: flex;
+        gap: 20px;
+        font-size: 12px;
+      }
+      .socials a:hover,
+      .email:hover {
+        color: #62822c;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        padding: 24px 0;
+        font-size: 10px;
+        color: var(--muted);
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+      }
+      .footer-inner .logo {
+        color: var(--ink);
+        font-size: 18px;
+      }
+      :focus-visible {
+        outline: 3px solid #8aa955;
+        outline-offset: 5px;
+      }
+      .back-top {
+        font-size: 12px;
+      }
+      @media (max-width: 900px) {
+        .wrap {
+          padding: 0 26px;
+        }
+        .hero {
+          gap: 28px;
+        }
+        h1 {
+          font-size: 55px;
+        }
+        .visual {
+          height: 380px;
+          padding: 17px;
+        }
+        pre {
+          font-size: 10px;
+          padding: 20px 14px;
+        }
+        .about {
+          gap: 40px;
+        }
+        .skill-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .contact {
+          padding: 35px;
+        }
+        .email {
+          font-size: 15px;
+        }
+      }
+      @media (max-width: 650px) {
+        nav {
+          height: 70px;
+        }
+        .menu {
+          display: block;
+          border: 1px solid var(--line);
+          border-radius: 4px;
+          background: transparent;
+          padding: 8px 12px;
+          color: var(--ink);
+        }
+        .links {
+          display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          background: var(--paper);
+          padding: 22px 26px;
+          border-bottom: 1px solid var(--line);
+          flex-direction: column;
+          align-items: stretch;
+          gap: 20px;
+        }
+        .links.open {
+          display: flex;
+        }
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 48px;
+          gap: 38px;
+          padding-bottom: 45px;
+        }
+        h1 {
+          font-size: 53px;
+          letter-spacing: -2.8px;
+        }
+        .intro {
+          font-size: 14px;
+        }
+        .visual {
+          height: 355px;
+          max-width: 450px;
+          width: 100%;
+        }
+        pre {
+          font-size: 12px;
+        }
+        .strip {
+          font-size: 10px;
+          gap: 18px;
+        }
+        .strip span:before {
+          margin-right: 7px;
+        }
+        section {
+          padding: 55px 0;
+        }
+        .about,
+        .education-grid,
+        .contact {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        h2 {
+          font-size: 32px;
+        }
+        .section-head {
+          align-items: start;
+          flex-direction: column;
+          gap: 17px;
+        }
+        .project-grid {
+          grid-template-columns: 1fr;
+        }
+        .job {
+          grid-template-columns: 1fr;
+          gap: 13px;
+          padding: 25px 0;
+        }
+        .job h3 {
+          font-size: 19px;
+        }
+        .job-date br {
+          display: none;
+        }
+        .job-date .current {
+          margin-right: 10px;
+        }
+        .contact {
+          padding: 30px;
+          margin-bottom: 45px;
+        }
+        .contact h2 {
+          font-size: 35px;
+        }
+        .facts {
+          gap: 25px;
+        }
+        .facts b {
+          font-size: 25px;
+        }
+        .footer-inner {
+          flex-wrap: wrap;
+        }
+        .skill-grid {
+          gap: 25px;
+        }
+        .project-art {
+          height: 215px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .btn {
+          transition: none;
+        }
+      }
+
+      /* A quiet, interactive constellation behind the portfolio. */
+      :root {
+        --ink: #e7f0f6;
+        --muted: #aabdc9;
+        --paper: #081321;
+        --accent: #c4dd86;
+        --line: #ffffff24;
+      }
+      body {
+        background: #081321;
+        isolation: isolate;
+      }
+      #magic-sky {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        pointer-events: none;
+      }
+      body:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse at 12% 18%, #16657838, transparent 48%),
+          radial-gradient(ellipse at 90% 60%, #55459a30, transparent 50%),
+          #081321;
+      }
+      header {
+        background: #081321df;
+      }
+      .logo span,
+      .links a:hover,
+      .socials a:hover,
+      .email:hover {
+        color: #c4dd86;
+      }
+      h1 .soft {
+        color: #a9d8d4;
+      }
+      .dot {
+        background: #c4dd86;
+        box-shadow: 0 0 15px #c4dd8680;
+      }
+      .btn {
+        background: #c4dd86;
+        color: #0c2029;
+        border-color: #c4dd86;
+      }
+      .btn.secondary {
+        color: #e7f0f6;
+        border-color: #ffffff40;
+        background: #10233475;
+      }
+      .nav-contact {
+        background: #c4dd86;
+        color: #0c2029;
+        border-color: #c4dd86;
+        font-weight: 700;
+      }
+      .links .nav-contact:hover {
+        color: #0c2029;
+        box-shadow: 0 0 24px #c4dd8630;
+      }
+      .visual {
+        background: #102838b3;
+        border-color: #ffffff26;
+        backdrop-filter: blur(7px);
+      }
+      .visual:before {
+        border-color: #7de2ec30;
+      }
+      .window {
+        background: #132c39;
+      }
+      .visual-tag {
+        background: #142b39;
+        border-color: #ffffff30;
+      }
+      .visual-label {
+        color: #b5cbd2;
+      }
+      .projects {
+        background: #0b1c2b90;
+      }
+      .project {
+        background: #102233dc;
+        backdrop-filter: blur(5px);
+      }
+      .art-site {
+        background: #203e46;
+      }
+      .art-chart {
+        background: #142e3c;
+      }
+      .skills-section {
+        background: #0c2132c9;
+        color: #e7f0f6;
+      }
+      .skills-section .label {
+        color: #aabdc9;
+      }
+      .score {
+        color: #c4dd86;
+      }
+      .contact {
+        background: linear-gradient(125deg, #173746ed, #17243bed);
+        border: 1px solid #a1dadd30;
+      }
+      .email {
+        border-color: #ffffff30;
+      }
+      footer {
+        background: #08132180;
+      }
+      .strip span:before,
+      .certs li:before {
+        color: #c4dd86;
+      }
+      .job-date .current {
+        color: #182d39;
+      }
+      .tags span {
+        background: #ffffff04;
+      }
+      @media (max-width: 650px) {
+        .links {
+          background: #0c1c2a;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="magic-sky" aria-hidden="true"></canvas>
+    <header>
+      <div class="wrap">
+        <nav aria-label="Main navigation">
+          <a href="#home" class="logo">Reshma Mohan</a
+          ><button class="menu" aria-expanded="false" aria-controls="nav-links">
+            Menu ☰
+          </button>
+          <div class="links" id="nav-links">
+            <a href="#about">About</a><a href="#projects">Projects</a
+            ><a href="#experience">Experience</a><a href="#skills">Skills</a
+            ><a class="nav-contact" href="#contact">Hire Me ↗</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap">
+        <section class="hero" id="home">
+          <div>
+            <div class="eyebrow">
+              <span class="dot"></span>Full Stack Developer & Technical Trainer
+            </div>
+            <h1>
+              Building solutions.<br /><span class="soft"
+                >Sharing knowledge.</span
+              ><span class="name">Hi, I’m Reshma Mohan</span>
+            </h1>
+            <p class="intro">
+              I build thoughtful digital solutions and help learners turn
+              complex programming concepts into practical skills.
+            </p>
+            <div class="actions">
+              <a class="btn" href="#projects">Explore my work <span>↗</span></a
+              ><a class="btn secondary" href="Reshma_Resume.pdf" download
+                >Download resume <span>↓</span></a
+              >
+            </div>
+            <div class="location">
+              <span>◎</span> Chennai, Tamil Nadu, India
+            </div>
+          </div>
+          <div
+            class="visual"
+            role="img"
+            aria-label="Code illustration representing Reshma's software development and mentoring skills"
+          >
+            <div class="eyebrow" style="font-size: 9px">
+              A little about how I work
+            </div>
+            <div class="window">
+              <div class="window-top">
+                <i></i><i></i><i></i><span>ReshmaMohan.java</span>
+              </div>
+              <pre><span class="code-muted">// Build. Learn. Share. Repeat.</span>
+<span class="code-green">class</span> ReshmaMohan {
+  String role = <span class="code-green">"Full Stack Developer"</span>;
+  String passion = <span class="code-green">"Teaching"</span>;
+
+  void createImpact() {
+    buildSolutions();
+    mentorDevelopers();
+  }
+}</pre>
+            </div>
+            <div class="visual-tag">
+              <strong>Code with purpose.</strong>Teach with clarity.
+            </div>
+            <div class="visual-label">ENGINEERING × EDUCATION</div>
+          </div>
+        </section>
+        <div class="strip">
+          <span>AI Product Development</span><span>Java & Spring Boot</span
+          ><span>Data Structures & Algorithms</span
+          ><span>Machine Learning</span>
+        </div>
+        <section class="about" id="about">
+          <div>
+            <div class="label">01 / ABOUT ME</div>
+            <h2>A developer’s mindset.<br />A trainer’s perspective.</h2>
+          </div>
+          <div>
+            <p>
+              I’m Reshma Mohan, a
+              <strong>Full Stack Developer and Technical Trainer</strong> based
+              in Chennai. My experience spans responsive websites, backend
+              implementation, machine learning integration, and end-to-end
+              project delivery.
+            </p>
+            <p>
+              At FyndSol Consulting, I translated client requirements into
+              working products. Today, at Wrench Wise, I work as a
+              <strong>AI Product Developer</strong> and teach
+              <strong>Java Full Stack Development and DSA</strong> through live
+              coding, practical exercises, and focused mentoring.
+            </p>
+            <div class="facts">
+              <div>
+                <b>1 year</b><span>Full Stack Development at FyndSol</span>
+              </div>
+              <div>
+                <b>84.6%</b><span>B.E. Computer Science aggregate</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section class="projects" id="projects">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="label">02 / SELECTED WORK</div>
+              <h2>Ideas, built into solutions.</h2>
+            </div>
+            <p>
+              A selection of professional work and academic projects across web
+              development and machine learning.
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project">
+              <div
+                class="project-art art-site"
+                aria-label="Illustrative corporate website concept"
+              >
+                <div class="mock">
+                  <div class="mock-nav">
+                    <b>FyndSol</b
+                    ><span>ABOUT &nbsp; SERVICES &nbsp; CONTACT</span>
+                  </div>
+                  <div class="mock-hero">
+                    <b>We Build<br />Trust!</b>
+                    <div class="circle"></div>
+                  </div>
+                  <div class="mock-footer">
+                    <span>TECHNOLOGY</span><span>TRANSFORMATION</span
+                    ><span>CONSULTING</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>FyndSol Corporate Website</h3>
+                  <span>↗</span>
+                </div>
+                <p>
+                  Independently designed and developed the company’s official
+                  website, delivering a responsive experience from concept
+                  through production deployment.
+                </p>
+                <div class="tags">
+                  <span>HTML</span><span>CSS</span><span>JavaScript</span
+                  ><span>PHP</span>
+                </div>
+                <a
+                  class="project-link"
+                  href="https://www.fyndsol.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit website ↗</a
+                >
+              </div>
+            </article>
+            <article class="project">
+              <div
+                class="project-art art-chart"
+                aria-label="Illustrative stock forecasting visualization, not actual model results"
+              >
+                <div class="chart">
+                  <div class="chart-title">
+                    <span>STOCK FORECASTING</span
+                    ><span style="color: #c4dd86">TIME SERIES</span>
+                  </div>
+                  <svg viewBox="0 0 380 120" fill="none" aria-hidden="true">
+                    <path d="M0 30H380M0 60H380M0 90H380" stroke="#344d56" />
+                    <path
+                      d="M0 100L22 84 40 90 64 63 88 70 112 55 137 68 159 40 182 47 205 28 228 38 252 21 274 27 298 14"
+                      stroke="#c4dd86"
+                      stroke-width="2.5"
+                    />
+                    <path
+                      d="M298 14L321 22 342 10 360 15 380 3"
+                      stroke="#c4dd86"
+                      stroke-width="2.5"
+                      stroke-dasharray="5 5"
+                    />
+                  </svg>
+                  <div class="chart-bottom">
+                    <span>DATA → MODEL → VISUALIZATION</span
+                    ><span>ILLUSTRATIVE PREVIEW</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-body">
+                <div class="project-top">
+                  <h3>Smart Trading & Forecasting</h3>
+                  <span>↗</span>
+                </div>
+                <p>
+                  A stock price prediction system using regression and
+                  time-series algorithms, with a data processing pipeline and
+                  financial visualization to support analysis.
+                </p>
+                <div class="tags">
+                  <span>Python</span><span>Machine Learning</span
+                  ><span>Time Series</span>
+                </div>
+                <a
+                  class="project-link"
+                  href="https://github.com/Reshdeep110"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Explore my GitHub ↗</a
+                >
+              </div>
+            </article>
+            <article class="project small">
+              <div class="num">03 / ACADEMIC PROJECT</div>
+              <h3>Daily Expense Tracker</h3>
+              <p>
+                A personal finance tool for recording, categorizing, and
+                managing daily expenses. As Database Lead, I designed the MySQL
+                schema, optimized queries, and maintained data integrity.
+              </p>
+              <div class="tags">
+                <span>HTML</span><span>CSS</span><span>MySQL</span
+                ><span>Database Design</span>
+              </div>
+            </article>
+            <article class="project small">
+              <div class="num">04 / PROFESSIONAL CONTRIBUTION</div>
+              <h3>AI Inventory Forecasting</h3>
+              <p>
+                A machine learning module built and integrated during my work at
+                FyndSol to analyze demand patterns and support more informed
+                inventory planning.
+              </p>
+              <div class="tags">
+                <span>Machine Learning</span><span>Demand Forecasting</span
+                ><span>Model Integration</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <div class="wrap">
+        <section id="experience">
+          <div class="section-head">
+            <div>
+              <div class="label">03 / MY JOURNEY</div>
+              <h2>Building. Teaching. Growing.</h2>
+            </div>
+            <p>
+              Hands-on engineering experience, paired with a passion for making
+              technology easier to understand.
+            </p>
+          </div>
+          <div class="timeline">
+            <article class="job">
+              <div class="job-date">
+                <span class="current">CURRENT</span><br />July 2026 — Present
+              </div>
+              <div>
+                <h3>AI Product Developer & Technical Trainer</h3>
+                <div class="company">
+                  Wrench Wise · Java Full Stack & DSA Training
+                </div>
+                <ul>
+                  <li>
+                    Work as an AI Product Developer using MongoDB,
+                    Express.js, React, and Node.js.
+                  </li>
+                  <li>
+                    Teach Core Java, OOP, Collections, JDBC, SQL, front-end
+                    technologies, and Spring Boot.
+                  </li>
+                  <li>
+                    Guide learners through data structures, algorithms, live
+                    coding, and problem-solving exercises.
+                  </li>
+                  <li>
+                    Design assignments and assessments, and provide targeted
+                    feedback to support progress.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="job">
+              <div class="job-date">June 2025 — May 2026</div>
+              <div>
+                <h3>Full Stack Developer</h3>
+                <div class="company">FyndSol Consulting LLP</div>
+                <ul>
+                  <li>
+                    Delivered the official company website and client websites
+                    from requirements to deployment.
+                  </li>
+                  <li>
+                    Built and integrated a machine learning inventory
+                    forecasting module.
+                  </li>
+                  <li>
+                    Collaborated with stakeholders on iterative design reviews
+                    and data-driven dashboards.
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="job">
+              <div class="job-date">2024</div>
+              <div>
+                <h3>Web Development Intern</h3>
+                <div class="company">CodeBind Technologies Pvt. Ltd.</div>
+                <ul>
+                  <li>
+                    Applied HTML, CSS, and JavaScript through practical
+                    front-end and back-end web development assignments.
+                  </li>
+                  <li>Built a shopping website as part of an internship assignment.</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+      <section class="skills-section" id="skills">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="label">04 / TECHNICAL TOOLKIT</div>
+              <h2>The tools behind the work.</h2>
+            </div>
+            <p>
+              A foundation in programming, full-stack engineering, databases,
+              and applied machine learning.
+            </p>
+          </div>
+          <div class="skill-grid">
+            <div class="skill-group">
+              <span class="n">01</span>
+              <h3>Languages & Core CS</h3>
+              <p>
+                Java · Python · JavaScript<br />HTML5 · CSS · SQL<br />DSA · OOP
+                · Collections<br />Exception Handling
+              </p>
+            </div>
+            <div class="skill-group">
+              <span class="n">02</span>
+              <h3>Full Stack Development</h3>
+              <p>
+                Spring Boot · JDBC<br />Bootstrap · PHP<br />Responsive
+                Interfaces<br />Full-Stack Development
+              </p>
+            </div>
+            <div class="skill-group">
+              <span class="n">03</span>
+              <h3>AI Product Development</h3>
+              <p>
+                MongoDB · Express.js<br />React · Node.js<br />Front-End
+                Development<br />Back-End Development
+              </p>
+            </div>
+            <div class="skill-group">
+              <span class="n">04</span>
+              <h3>Data & Machine Learning</h3>
+              <p>
+                MySQL · Schema Design<br />Query Optimization<br />Regression ·
+                Time Series<br />ML Model Integration
+              </p>
+            </div>
+            <div class="skill-group">
+              <span class="n">05</span>
+              <h3>Delivery & Mentoring</h3>
+              <p>
+                Git · GitHub<br />Agile Collaboration<br />Client
+                Communication<br />Technical Mentoring
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="wrap">
+        <section>
+          <div class="section-head">
+            <div>
+              <div class="label">05 / LEARNING FOUNDATION</div>
+              <h2>Always a student, too.</h2>
+            </div>
+          </div>
+          <div class="education-grid">
+            <div>
+              <article class="education-card">
+                <h3>B.E. Computer Science & Engineering</h3>
+                <p>
+                  Jerusalem Engineering College, Anna University<br />2021 —
+                  2025
+                </p>
+                <div class="score">Aggregate: 84.6%</div>
+              </article>
+              <article class="education-card">
+                <h3>Higher Secondary Education</h3>
+                <p>Holy Family Convent Matriculation Hr. Sec. School · 2021</p>
+                <div class="score">Score: 84%</div>
+              </article>
+              <article class="education-card">
+                <h3>Secondary School Education</h3>
+                <p>Brilliant Matriculation Hr. Sec. School · 2019</p>
+                <div class="score">Score: 78.4%</div>
+              </article>
+            </div>
+            <div>
+              <div class="label">CERTIFICATIONS & TRAINING</div>
+              <ul class="certs">
+                <li>Java Full Stack Development — Blue Ball Technology</li>
+                <li>STEP Program — Hindu Group</li>
+                <li>Career Mentoring Program — Intercell</li>
+                <li>Implant Training in Web Technology</li>
+                <li>Python Programming — Online Certification</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="contact" id="contact">
+          <div>
+            <div class="label">06 / LET’S CONNECT</div>
+            <h2>Have something<br />worth building?</h2>
+            <p>
+              Connect with me about software development opportunities,
+              technical training, or a project you have in mind.
+            </p>
+          </div>
+          <div class="contact-links">
+            <a class="email" href="mailto:mohan1973cm@gmail.com"
+              >mohan1973cm@gmail.com ↗</a
+            ><a style="font-size: 13px" href="tel:+917092510149"
+              >+91 70925 10149</a
+            >
+            <div class="socials">
+              <a
+                href="https://www.linkedin.com/in/reshma-mohan01"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn ↗</a
+              ><a
+                href="https://github.com/Reshdeep110"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub ↗</a
+              ><a href="Reshma_Resume.pdf" download>Resume ↓</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap footer-inner">
+        <a class="logo" href="#home">Reshma Mohan</a
+        ><span
+          >© <span id="year">2026</span> Reshma Mohan Built with purpose.</span
+        ><a class="back-top" href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+    <script>
+      const menu = document.querySelector(".menu"),
+        links = document.querySelector(".links");
+      menu.addEventListener("click", () => {
+        const open = links.classList.toggle("open");
+        menu.setAttribute("aria-expanded", String(open));
+      });
+      links.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => {
+          links.classList.remove("open");
+          menu.setAttribute("aria-expanded", "false");
+        }),
+      );
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="magic-sky.js"></script>
+  </body>
+</html>
